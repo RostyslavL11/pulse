@@ -1,4 +1,5 @@
 @import 'base/variables';
+
 * {
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
@@ -12,3 +13,4 @@
 @import 'blocks/header.scss';
 @import 'blocks/buttons';
 @import 'blocks/advant';
+@import 'base/media';
