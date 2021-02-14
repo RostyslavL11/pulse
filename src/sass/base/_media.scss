@@ -1,5 +1,8 @@
 @media (max-width: 1200px){
-
+    .catalog{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @media (max-width: 991px){
@@ -25,6 +28,15 @@
     .consultation{
         padding-left: 20px;
         padding-right: 20px;
+    }
+    .catalog{
+        &__content{
+        justify-content: center;
+        }
+        &-item{
+        margin-right: 10px;
+        margin-left: 10px;  
+        }
     }
 }
 @media (max-width: 768px){
@@ -79,6 +91,18 @@
             font-size: 18px;
         }
     }
+    .catalog{
+        &__tab{
+            div{
+                font-size: 13px;
+            }
+        }
+    }
+    .review{
+        &__text{
+            font-size: 14px;
+        }
+    }
 }
 @media (max-width: 575px){
     .header{
@@ -112,6 +136,11 @@
             height: 55px;
             font-size: 16px;
         }
+        &_mini {
+            width: 135px;
+            height: 44px;
+            font-size: 14px;
+         }
     }
     .promo{
         padding: 40px 10px 50px 10px;
@@ -176,6 +205,43 @@
             font-size: 27px;
         }
     }
+    .review{
+        &__block{
+            display: flex;
+            flex-direction: column;
+        }
+        &__img{
+            display: block;
+            margin: 0 auto;
+        }
+        &__title, &__subtitle, &__text{
+            text-align: center;
+        }
+        &__title{
+            margin-top: 25px;
+        }
+    }
+}
+
+@media (max-width: 440px){
+    .catalog{
+        &__content{
+            margin-top: 30px;
+        }
+        &__tabs{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            margin-top: 25px;
+            }
+        &__tab {
+            margin-top: 10px;
+        }
+        
+    }
+    .title{
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 400px){
@@ -207,6 +273,11 @@
             font-size: 13px;
             margin-top: 40px;
         }
+        &_mini {
+            width: 115px;
+            height: 36px;
+            font-size: 14px;
+         }
     }
     .promo{
         &__wrapper{
@@ -235,11 +306,22 @@
         }
     }
     .title{
+        font-size: 24px;
         &_left{
             font-size: 23px;
         }
     }
     .feed-form{
         width: 240px;
+    }
+    .catalog{
+        &-item{
+            &__divider{
+                margin-top: 10px;
+            }
+            &__price{
+                font-size: 17px;
+            }
+        }
     }
 }
