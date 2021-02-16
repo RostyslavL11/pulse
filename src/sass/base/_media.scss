@@ -38,6 +38,23 @@
         margin-left: 10px;  
         }
     }
+    .carousel{
+        padding: 50px 10px 50px 10px;
+    }
+    .slick-dots {
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        button{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 50%;  
+            
+        }
+    }
 }
 @media (max-width: 768px){
     .promo{
@@ -321,6 +338,20 @@
             }
             &__price{
                 font-size: 17px;
+            }
+        }
+    }
+    .footer{
+        &__info{
+            padding: 30px 25px 30px 25px;
+            max-width: 100%;
+            height: 245px;
+        }
+        &__social-item{
+            width: 43px;
+            height: 43px;
+            img{
+                height: 21px;
             }
         }
     }
