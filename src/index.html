@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="css/font.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-    <section class="promo">
+    <section id="up" class="promo">
         <div class="container">
             <header class="header">
                 <a href="#" class="header__logo">
@@ -47,7 +48,7 @@
                 </div>
 
                 <button data-modal="consultation" class="button button_main">заказать кОНСУЛЬТАЦИЮ</button>
-                <div class="promo__link">или <a href="#">ПЕРЕЙТИ В КАТАЛОГ</a></div>
+                <div class="promo__link">или <a href="#catalog">ПЕРЕЙТИ В КАТАЛОГ</a></div>
             </div>
         </div>
     </section>
@@ -72,7 +73,7 @@
                 </div>
 
                 <div class="advant__items">
-                    <img src="icons/advantages/heart.png" alt="" class="advant__img">
+                    <img src="icons/advantages/heart.png" alt="" class="advant__img advant__img_animated">
                     <h3 class="advant__subheader">
                         Заботимся о здоровье
 
@@ -106,11 +107,10 @@
                 Просто заполните форму заявки <br>
                 и мы перезвоним вам в течении 10 минут
             </div>
-            <form class="feed-form" action="# ">
+            <form id="consultation-form" class="feed-form" action="# ">
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
+                <input name="phone" required placeholder="Ваш телефон">
                 <input name="email" required placeholder="Ваш E-mail" type="email">
-
                 <!-- <input type="submit" value="заказать кОНСУЛЬТАЦИЮ"> -->
                 <button class="button button__submit">заказать кОНСУЛЬТАЦИЮ</button>
             </form>
@@ -134,7 +134,7 @@
         </div>
     </section>
 
-    <section class="catalog">
+    <section class="catalog" id="catalog">
         <div class="container">
             <h2 class="title title_catalog">Каталог пульсометров</h2>
             <ul class="catalog__tabs">
@@ -507,7 +507,7 @@
         <div class="container">
             <h2 class="title">отзывы клиентов</h2>
 
-            <div class="review__block">
+            <div class="review__block animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_1.png" alt="" class="review__img">
                 <div class="review__descr">
                     <div class="review__title">Ирина Иванченко</div>
@@ -527,7 +527,7 @@
                 </div>
             </div>
 
-            <div class="review__block">
+            <div class="review__block animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_2.png" alt="" class="review__img">
                 <div class="review__descr">
                     <div class="review__title">Иван Сёмочкин</div>
@@ -544,7 +544,7 @@
                     </div>
                 </div>
             </div>
-            <div class="review__block">
+            <div class="review__block animate__animated animate__fadeInUp wow" data-wow-duration="2s" data-wow-delay="1s">
                 <img src="img/feed_3.png" alt="" class="review__img">
                 <div class="review__descr">
                     <div class="review__title">Юлия Дашкина</div>
@@ -585,10 +585,10 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Просто заполните форму заявки</div>
             <div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
-            <form class="feed-form feed-form_mt25" action="# ">
-                <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+            <form class="feed-form feed-form_mt25 feed-form_mobi" action="# ">
+                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="phone" placeholder="Ваш телефон">
+                <input name="email" placeholder="Ваш E-mail" type="email">
     
                 <!-- <input type="submit" value="заказать кОНСУЛЬТАЦИЮ"> -->
                 <button class="button button__submit">заказать кОНСУЛЬТАЦИЮ</button>
@@ -599,10 +599,10 @@
             <div class="modal__close">&times;</div>
             <div class="modal__subtitle">Ваш заказ:</div>
             <div class="modal__descr">Пульсометр Polar FT1</div>
-            <form class="feed-form feed-form_mt25" action="# ">
+            <form class="feed-form feed-form_mt25 feed-form_mobi" action="# ">
                 <input name="name" required placeholder="Ваше имя" type="text">
-                <input name="phone" required placeholder="Ваш телефон" type="number">
-                <input name="email" required placeholder="Ваш E-mail" type="email">
+                <input name="phone" required  placeholder="Ваш телефон">
+                <input name="email" required  placeholder="Ваш E-mail" type="email">
     
                 <!-- <input type="submit" value="заказать кОНСУЛЬТАЦИЮ"> -->
                 <button class="button button__submit">Купить</button>
@@ -614,12 +614,19 @@
             <div class="modal__subtitle">Спасибо за вашу заявку!</div>
             <div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>           
         </div>
-        
     </div>
+
+    <a href="#up" class="pageup">
+        <img src="icons/arrow-circle-up-solid.svg" alt="">
+    </a>
+  
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
     
 </body>

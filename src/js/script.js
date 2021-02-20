@@ -50,4 +50,71 @@ $(document).ready(function(){
             $('.overlay, #order').fadeIn('slow');
         });
     });
+
+    function validateForms(form){
+        $(form).validate({
+            rules: {
+                name: {
+                required: true,
+                minlength: 2
+                },
+                phone: 'required',
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                name: {
+                    required: "Будь ласка, введіть своє ім'я",
+                    minlength: jQuery.validator.format("Введіть {0} символів!")
+                },
+                phone: "Будь ласка, введіть свій номер телефону",
+                email: {
+                required: "Будь ласка, введіть свою пошту",
+                email: "Неправильно введена адресса пошти"
+                }
+            }
+        });
+    };
+
+    validateForms('#consultation-form');
+    validateForms('#consultation form');
+    validateForms('#order form');
+
+    $('input[name=phone]').mask("+38 (999) 999-9999");
+
+    $('form').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function () {
+            $(this).find("input").val("")
+
+            $('form').trigger('reset');
+        });
+        return false;
+    });
+
+    // smooth scroll und page up
+
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+    $("a[href^='#']").click(function(){
+        const _href = $(this).attr("href");
+        $("html, body").animate({scrollTop: $(_href).offset().top+"px"});
+        return false;
+    });
+    
+    new WOW().init();
+
 });
+

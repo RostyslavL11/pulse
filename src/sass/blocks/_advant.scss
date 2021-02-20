@@ -46,6 +46,14 @@
             text-transform: uppercase;
             color: #FF0000;
         }
+    }
+    &__img {
+        &_animated{
+            animation: heartbeat 1.5s ease infinite;
+            &:hover {
+                animation-play-state: paused;
+            }
         }
+    }
     
 }
